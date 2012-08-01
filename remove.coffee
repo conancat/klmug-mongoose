@@ -1,41 +1,51 @@
+# #######################
 # Removing a document
+# #######################
 
 {Song} = require './models'
 
-# # Batch remove 
-# Song.remove artist: 'Mark Smalley', (err) ->
-#   if err 
-#     return console.log 'REMOVE ERROR', err
+# #################
+# Batch remove 
+# #################
 
-#   console.log 'REMOVE Success'
-#   process.exit()
+Song.remove artist: 'Mark Smalley', (err) ->
+  if err 
+    return console.log 'REMOVE ERROR', err
 
-# Removing by each document
-Song.find artist: 'Mark Smalley', (err, result) ->
-  if err
-    return console.log 'REMOVE find error', err
+  console.log 'REMOVE Success'
+  process.exit()
 
-  console.log "REMOVE find documents found: #{result.length}"
+# ####################################
+# Removing by each individual document
+# ####################################
 
-  if result.length is 0 
-    console.log 'REMOVE no documents found, exiting'
-    process.exit()
+# Song.find artist: 'Mark Smalley', (err, result) ->
+#   if err
+#     return console.log 'REMOVE find error', err
 
-  count = 0
-  max = result.length
+#   console.log "REMOVE find documents found: #{result.length}"
 
-  remove = ->
-    result[count].remove (err) ->
-      if err 
-        return console.log 'REMOVE error', err
+#   if result.length is 0 
+#     console.log 'REMOVE no documents found, exiting'
+#     process.exit()
 
-      count++
-      console.log "REMOVE done for doc #{count}"
+#   count = 0
+#   max = result.length
+
+#   remove = ->
+#     doc = result[count]
+
+#     doc.remove (err) ->
+#       if err 
+#         return console.log 'REMOVE error', err
+
+#       count++
+#       console.log "REMOVE done for doc #{count}"
       
-      if count < max
-        remove()
-      else
-        console.log 'REMOVE ALL done, awesomesauce!'
-        process.exit()
+#       if count < max
+#         remove()
+#       else
+#         console.log 'REMOVE ALL done, awesomesauce!'
+#         process.exit()
 
-  remove()
+#   remove()

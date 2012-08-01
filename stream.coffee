@@ -1,5 +1,7 @@
+# #######################
 # Query stream
 # http://mongoosejs.com/docs/querystream.html
+# #######################
 
 # Require model
 {Song} = require './models'
@@ -18,8 +20,10 @@ query.select
   videoId: 1
   _id: 0
 
+# Execute query as a stream
 stream = query.stream()
 
+# Some testing functon
 count = 0
 
 stream.on 'data', (doc) ->
