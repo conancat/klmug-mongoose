@@ -2,6 +2,11 @@
 
 MongoDB and NodeJS? Match made in heaven!
 
+Resources: 
+
+* NodeJS: http://nodejs.org/
+* MongooseJS: http://mongoosejs.com/
+* CoffeeScript: http://coffeescript.org/
 
 ## How To Play
 
