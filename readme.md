@@ -8,6 +8,14 @@ Resources:
 * MongooseJS: http://mongoosejs.com/
 * CoffeeScript: http://coffeescript.org/
 
+## What we're covering
+
+* How to connect to the DB and create schemas (`models.coffee`)
+* How to use the Model.find() function, similar to the MongoDB shell commands (`find.coffee`)
+* How to create and use the Query object by doing `query = Model.find({})`, then specifying filters and options (`query.coffee`)
+* How to use the Query.stream() function for streaming data from MongoDB (`stream.coffee`)
+* How to remove documents (`remove.coffee`)
+
 ## How To Play
 
 ### Mock Data
@@ -38,10 +46,11 @@ npm install coffee-script -g
 Once you're done, run the files by doing: 
 
 ```
+coffee create
 coffee find
-coffee remove
+coffee query
 coffee stream
-...etc
+coffee remove
 ```
 
 Have fun!
