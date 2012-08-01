@@ -7,13 +7,13 @@
 
 # Normal find operation
 # Model.find(query, callback)
-#
-# Song.find {}, (err, result) ->
-#   if err 
-#     return console.log 'QUERY error', err
 
-#   console.log result
-#   process.exit()
+Song.find {}, (err, result) ->
+  if err 
+    return console.log 'QUERY error', err
+
+  console.log result
+  process.exit()
 
 
 # Find specific item
