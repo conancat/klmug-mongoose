@@ -11,6 +11,7 @@ Resources:
 ## What we're covering
 
 * How to connect to the DB and create schemas (`models.coffee`)
+* How to create new documents (`create.coffee`)
 * How to use the Model.find() function, similar to the MongoDB shell commands (`find.coffee`)
 * How to create and use the Query object by doing `query = Model.find({})`, then specifying filters and options (`query.coffee`)
 * How to use the Query.stream() function for streaming data from MongoDB (`stream.coffee`)
